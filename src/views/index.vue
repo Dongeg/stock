@@ -1,20 +1,20 @@
 <template>
   <div class="iframeView-ctn">
-    <iframeView></iframeView>
+<!--    <iframeView></iframeView>-->
+    <stockList></stockList>
   </div>
 </template>
-
 <script lang="ts">
-  import { reactive } from 'vue'
-  import iframeView from './iframeView.vue'
+  import iframeView from '../components/iframeView.vue'
+  import stockList from '../components/stockList.vue'
   export default {
     name: 'Index',
     components :{
-      iframeView
+      iframeView,
+      stockList
     },
     setup(){
-      const title = reactive<String>("标题")
-      return {title}
+
     },
   }
 </script>
