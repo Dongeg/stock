@@ -6,7 +6,8 @@
 
 <script lang="ts">
     import { reactive } from 'vue'
-    import {getStockList} from '../api/api'
+    import { getStockList } from '../api/api'
+    import { getLocalStorage, setLocalStorage } from '../assets/js/utils'
     export default {
         name: 'stockList',
         components :{
@@ -16,8 +17,14 @@
             let state = reactive({
                 stockList:[]
             })
-            const result = getStockList(['sh601006'])
-            console.log(result)
+            function addStock (stockCode:string){
+                console.log(stockCode)
+                const result = getStockList(['sh601006'])
+            }
+            return {
+                state,
+                addStock
+            }
         },
     }
 </script>

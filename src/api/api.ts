@@ -1,10 +1,11 @@
 import {request, STOCK_TYPE} from '../assets/js/utils'
-import axios from "axios";
-export const getStockList = (data:Array<string>) => {
+export async function getStockList (data:Array<string>) {
     const params = data.join(',')
-    return request({
+    const resp = await request({
         url: '/stockMsg/list=' + params,
     })
+    const splitData = resp.data.split(';\n');
+    return splitData
 }
 
 
@@ -16,8 +17,8 @@ export async function getStockSuggestList(searchText = '', type = '2'){
     }
     const url = `/stockList/suggest/type=${type}&key=${encodeURIComponent(searchText)}`;
     try {
-        const response = await axios.get(url);
-        const text = response.data.slice(18, -1);
+        const response = await request({url:url});
+        const text = response.slice(18, -1);
         const tempArr = text.split(';');
         let result:any =  [];
         tempArr.forEach((item: string) => {
