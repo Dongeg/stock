@@ -1,17 +1,20 @@
 <template>
   <div class="iframeView-ctn">
-<!--    <iframeView></iframeView>-->
+    <iframeView></iframeView>
     <stockList></stockList>
+    <searchBar></searchBar>
   </div>
 </template>
 <script lang="ts">
   import iframeView from '../components/iframeView.vue'
   import stockList from '../components/stockList.vue'
+  import searchBar from '../components/searchBar.vue'
   export default {
     name: 'Index',
     components :{
       iframeView,
-      stockList
+      stockList,
+      searchBar
     },
     setup(){
 

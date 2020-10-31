@@ -1,5 +1,5 @@
-import {customRef} from 'vue'
 import axios from 'axios'
+export const STOCK_TYPE = ['sh', 'sz', 'hk', 'gb', 'us'];
 interface requestParams {
     url:string,
     method?:string,
