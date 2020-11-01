@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d36e0c5-7192-4ec9-bbba-a6361648d688" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/stockList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stockList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +88,7 @@
       <workItem from="1604150537242" duration="2239000" />
       <workItem from="1604203380173" duration="12431000" />
       <workItem from="1604221930934" duration="1926000" />
+      <workItem from="1604224842569" duration="147000" />
     </task>
     <task id="LOCAL-00001" summary="对接获取股票列表接口">
       <created>1604116062044</created>
