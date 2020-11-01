@@ -1,11 +1,127 @@
-import {request, STOCK_TYPE} from '../assets/js/utils'
+import {request, STOCK_TYPE, calcFixedPirceNumber, formatNumber} from '../assets/js/utils'
 export async function getStockList (data:Array<string>) {
     const params = data.join(',')
     const resp = await request({
         url: '/stockMsg/list=' + params,
     })
-    const splitData = resp.data.split(';\n');
-    return splitData
+    const splitData = resp.split(';\n');
+    let sz: any = null;
+    let aStockCount = 0;
+    let usStockCount = 0;
+    let hkStockCount = 0;
+    let noDataStockCount = 0;
+    let _data = splitData.map((item,index)=>{
+        if(item){
+            const code = item.split('="')[0].split('var hq_str_')[1];
+            const params = item.split('="')[1].split(',');
+            let type = code.substr(0, 2) || 'sh';
+            let symbol = code.substr(2);
+            let stockItem: any;
+            let fixedNumber = 2;
+            if (params.length > 1) {
+                if (/^(sh|sz)/.test(code)) {
+                    let open = params[1];
+                    let yestclose = params[2];
+                    let price = params[3];
+                    let high = params[4];
+                    let low = params[5];
+                    fixedNumber = calcFixedPirceNumber(open, yestclose, price, high, low);
+                    stockItem = {
+                        code,
+                        area:'A',
+                        name: params[0],
+                        open: formatNumber(open, fixedNumber, false),
+                        yestclose: formatNumber(yestclose, fixedNumber, false),
+                        price: formatNumber(price, fixedNumber, false),
+                        low: formatNumber(low, fixedNumber, false),
+                        high: formatNumber(high, fixedNumber, false),
+                        volume: formatNumber(params[8], 2),
+                        amount: formatNumber(params[9], 2),
+                        percent: '',
+                    };
+                    aStockCount += 1;
+                } else if (/^hk/.test(code)) {
+                    let open = params[2];
+                    let yestclose = params[3];
+                    let price = params[6];
+                    let high = params[4];
+                    let low = params[5];
+                    fixedNumber = calcFixedPirceNumber(open, yestclose, price, high, low);
+                    stockItem = {
+                        code,
+                        area:'HK',
+                        name: params[1],
+                        open: formatNumber(open, fixedNumber, false),
+                        yestclose: formatNumber(yestclose, fixedNumber, false),
+                        price: formatNumber(price, fixedNumber, false),
+                        low: formatNumber(low, fixedNumber, false),
+                        high: formatNumber(high, fixedNumber, false),
+                        volume: formatNumber(params[12], 2),
+                        amount: formatNumber(params[11], 2),
+                        percent: '',
+                    };
+                    hkStockCount += 1;
+                } else if (/^gb_/.test(code)) {
+                    symbol = code.substr(3);
+                    let open = params[5];
+                    let yestclose = params[26];
+                    let price = params[1];
+                    let high = params[6];
+                    let low = params[7];
+                    fixedNumber = calcFixedPirceNumber(open, yestclose, price, high, low);
+                    stockItem = {
+                        code,
+                        area:'GB',
+                        name: params[0],
+                        open: formatNumber(open, fixedNumber, false),
+                        yestclose: formatNumber(yestclose, fixedNumber, false),
+                        price: formatNumber(price, fixedNumber, false),
+                        low: formatNumber(low, fixedNumber, false),
+                        high: formatNumber(high, fixedNumber, false),
+                        volume: formatNumber(params[10], 2),
+                        amount: '接口无数据',
+                        percent: '',
+                    };
+                    type = code.substr(0, 3);
+                    noDataStockCount += 1;
+                } else if (/^usr_/.test(code)) {
+                    symbol = code.substr(4);
+                    let open = params[5];
+                    let yestclose = params[26];
+                    let price = params[1];
+                    let high = params[6];
+                    let low = params[7];
+                    fixedNumber = calcFixedPirceNumber(open, yestclose, price, high, low);
+                    stockItem = {
+                        code,
+                        area:'US',
+                        name: params[0],
+                        open: formatNumber(open, fixedNumber, false),
+                        yestclose: formatNumber(yestclose, fixedNumber, false),
+                        price: formatNumber(price, fixedNumber, false),
+                        low: formatNumber(low, fixedNumber, false),
+                        high: formatNumber(high, fixedNumber, false),
+                        volume: formatNumber(params[10], 2),
+                        amount: '接口无数据',
+                        percent: '',
+                    };
+                    type = code.substr(0, 4);
+                    usStockCount += 1;
+                }
+
+            } else {
+                console.log(`接口不支持该股票 ${code}`)
+            }
+            return stockItem
+        }
+    })
+    let result:any = []
+    _data.forEach((item:object)=>{
+        if(item){
+            result.push(item)
+        }
+    })
+    return result
 }
 
 

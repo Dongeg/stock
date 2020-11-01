@@ -18,7 +18,7 @@
   export default {
     name: 'iframeView',
     setup(){
-      const iframeSrc = ref<String>("https://www.baidu.com/")
+      const iframeSrc = ref<String>("https://cn.vuejs.org/v2/guide/")
       const inputValue = ref<String>("")
       let state = reactive({
         showInput:false,

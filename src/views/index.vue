@@ -1,6 +1,6 @@
 <template>
   <div class="iframeView-ctn">
-<!--    <iframeView></iframeView>-->
+    <iframeView></iframeView>
     <stockList ref="stockListRef"></stockList>
     <searchBar @addStock="addStock"></searchBar>
   </div>

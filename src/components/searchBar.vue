@@ -69,6 +69,7 @@
   function monitorKey(state:stateType){
     document.onkeyup = (e)=>{
       if (e && e.keyCode == 70) { // 按 f 显示搜索框
+        console.log(1111)
         state.showSearchInput = true
         state.inputAutoFocus = true
       }
@@ -88,6 +89,7 @@
     border: 1px solid rgb(204,204,204);
     border-radius: 0 0 5px 5px;
     border-top: none;
+    background: #ffffff;
   }
   .suggestList-item {
     padding:0px 10px;
