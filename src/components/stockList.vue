@@ -56,7 +56,7 @@
                         })
                         state.stockList = res
                     })
-                },3000)
+                },30000)
             }
             function toggle() {
                 state.show = !state.show

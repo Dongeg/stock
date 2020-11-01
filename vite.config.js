@@ -1,7 +1,6 @@
 module.exports = {
+  base :'./',
   // 配置Dep优化行为
-  publicPath: '/',
-  baseUrl :process.env.NODE_ENV === 'production' ?'./':'/',
   optimizeDeps: {
     include: ["lodash"]
   },

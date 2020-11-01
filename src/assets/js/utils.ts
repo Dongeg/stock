@@ -11,11 +11,12 @@ interface requestParams {
 export async function request(params:requestParams) {
     let url = params.url
     if(process.env.NODE_ENV === 'production'){
-        if(url.indexOf('stockMsg')){
-            url = stockMsg_url + url
+        if(url.indexOf('stockMsg') !== -1){
+            console.log()
+            url = stockMsg_url +  url.replace('stockMsg','')
         }
-        if(url.indexOf('stockList')){
-            url = stockList_url + url
+        if(url.indexOf('stockList') !== -1){
+            url = stockMsg_url + url.replace('stockList','')
         }
     }
     // @ts-ignore

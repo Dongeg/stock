@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d36e0c5-7192-4ec9-bbba-a6361648d688" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/openleft.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/js/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/iframeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/iframeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/stockList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/stockList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue-vben-admin-main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -73,8 +69,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -93,7 +89,8 @@
       <workItem from="1604122511365" duration="3919000" />
       <workItem from="1604128032475" duration="7424000" />
       <workItem from="1604150537242" duration="2239000" />
-      <workItem from="1604203380173" duration="9277000" />
+      <workItem from="1604203380173" duration="12431000" />
+      <workItem from="1604221930934" duration="1926000" />
     </task>
     <task id="LOCAL-00001" summary="对接获取股票列表接口">
       <created>1604116062044</created>
@@ -117,29 +114,29 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2632" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604070264430" />
-    <state x="2660" y="274" key="FileChooserDialogImpl" timestamp="1604070918471">
+    <state x="2660" y="274" key="FileChooserDialogImpl" timestamp="1604219883784">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604070918471" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom" timestamp="1604152784733">
+    <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604219883784" />
+    <state width="1899" height="188" key="GridCell.Tab.0.bottom" timestamp="1604224234341">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604061777082" />
-    <state width="1899" height="148" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604152784733" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center" timestamp="1604152784733">
+    <state width="1899" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604224234341" />
+    <state width="1899" height="188" key="GridCell.Tab.0.center" timestamp="1604224234341">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604061777082" />
-    <state width="1899" height="148" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604152784733" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left" timestamp="1604152784733">
+    <state width="1899" height="188" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604224234341" />
+    <state width="1899" height="188" key="GridCell.Tab.0.left" timestamp="1604224234340">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604061777081" />
-    <state width="1899" height="148" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604152784733" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right" timestamp="1604152784733">
+    <state width="1899" height="188" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604224234340" />
+    <state width="1899" height="188" key="GridCell.Tab.0.right" timestamp="1604224234341">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604061777082" />
-    <state width="1899" height="148" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604152784733" />
+    <state width="1899" height="188" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1604224234341" />
   </component>
 </project>
