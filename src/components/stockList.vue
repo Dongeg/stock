@@ -48,16 +48,17 @@
                 stockCodeList:[]
             })
             state.stockCodeList = getLocalStorage('stockCodeList') || []
-            if(state.stockCodeList[0]){
-                setInterval(()=>{
+            setInterval(()=>{
+                if(state.stockCodeList[0]){
                     getStockList(state.stockCodeList).then((res)=>{
                         res.forEach((item)=>{
                             item.increase = ((item.price - item.open) / item.open * 100).toFixed(2)
                         })
                         state.stockList = res
                     })
-                },30000)
-            }
+                }
+            },5000)
+
             function toggle() {
                 state.show = !state.show
             }
